@@ -58,7 +58,7 @@ class ClassNode(object):
             segs = line.split()
             # .source <source-file>
             if segs[0] == ".source":
-                self.source = segs[1]
+                self.source = ' '.join(segs[1:])
             # .class <access-spec> <class-name>
             elif segs[0] == ".class":
                 self.name = segs[-1]
