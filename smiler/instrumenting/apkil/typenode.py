@@ -1,4 +1,4 @@
-import constants
+import smiler.instrumenting.apkil.constants as constants
 
 class TypeNode(object):
 
@@ -16,7 +16,7 @@ class TypeNode(object):
         self.dim = desc.rfind('[') + 1
         desc = desc[self.dim:]
 
-        if constants.BASIC_TYPES.has_key(desc[0]):
+        if desc[0] in constants.BASIC_TYPES:
             self.type_ = desc[0]
             self.basic = True
             if self.type_ == 'V':

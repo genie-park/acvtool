@@ -1,12 +1,12 @@
-import constants
-import insnnode
-from logger import log
-from labelnode import LabelNode
-from arraydatanode import ArrayDataNode
-from typenode import TypeNode
-from trynode import TryNode
-from switchnode import SwitchNode
-from codeblocknode import CodeBlockNode
+import smiler.instrumenting.apkil.constants as constants
+import smiler.instrumenting.apkil.insnnode as insnnode
+from smiler.instrumenting.apkil.logger import log
+from smiler.instrumenting.apkil.labelnode import LabelNode
+from smiler.instrumenting.apkil.arraydatanode import ArrayDataNode
+from smiler.instrumenting.apkil.typenode import TypeNode
+from smiler.instrumenting.apkil.trynode import TryNode
+from smiler.instrumenting.apkil.switchnode import SwitchNode
+from smiler.instrumenting.apkil.codeblocknode import CodeBlockNode
 from operator import attrgetter
 
 class MethodNode(object):
@@ -170,7 +170,7 @@ class MethodNode(object):
             if c == '[':
                 dim += 1
                 index += 1
-            elif constants.BASIC_TYPES.has_key(c):
+            elif c in constants.BASIC_TYPES:
                 self.paras.append(TypeNode(paras[index - dim:index + 1]))
                 index += 1
                 dim = 0

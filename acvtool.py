@@ -30,18 +30,19 @@ def run_actions(parser, args=None):
     if args.subcmd in ["instrument", "install", "uninstall", "start", "stop", "report"] and args.device:
             config.adb_path = "{} -s {}".format(config.adb_path, args.device)
     if args.subcmd == "instrument":
-        if os.path.isdir(args.working_dir):
-            if not args.force:
-                print("The working directory exists and may contain data: {}".format(args.working_dir))
-                user_choice = input("Overwrite (y/n)? ")
-                if user_choice.lower() in ["y", "yes"]:
-                    pass
-                elif user_choice.lower() in ["n", "no"]:
-                    print("Aborting operation!")
-                    return
-                else:
-                    print("Your choice is not correct! Exiting!")
-                    return
+        # if os.path.isdir(args.working_dir):
+        #     if not args.force:
+        #         print("The working directory exists and may contain data: {}".format(args.working_dir))
+        #         user_choice = input("Overwrite (y/n)? ")
+        #         if user_choice.lower() in ["y", "yes"]:
+        #             pass
+        #         elif user_choice.lower() in ["n", "no"]:
+        #             print("Aborting operation!")
+        #             return
+        #         else:
+        #             print("Your choice is not correct! Exiting!")
+        #             return
+
         package, apk_path, pickle_path = smiler.instrument_apk(
             apk_path=args.apk_path,
             result_dir=args.working_dir,

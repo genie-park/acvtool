@@ -1,5 +1,5 @@
 import os
-import commander
+import smiler.instrumenting.commander as commander
 
 
 class ApktoolInterface:

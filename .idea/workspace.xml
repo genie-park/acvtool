@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/smiler/smiler.py" description="smali_tree = SmaliTree(input_smali_dirs)" line="282" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2d88a46-1749-4aa4-9cf0-9cbab5be251c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smiler/libs/jars/apktool_2.3.1.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acvtool.py" afterPath="$PROJECT_DIR$/acvtool.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/coverage.py" afterPath="$PROJECT_DIR$/smiler/coverage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/granularity.py" afterPath="$PROJECT_DIR$/smiler/granularity.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/android_manifest.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/android_manifest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/apkil/classnode.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/apkil/classnode.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/apkil/fieldnode.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/apkil/fieldnode.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/apkil/insnnode.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/apkil/insnnode.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/apkil/labelnode.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/apkil/labelnode.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/apkil/methodnode.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/apkil/methodnode.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/apkil/smalitree.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/apkil/smalitree.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/apkil/typenode.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/apkil/typenode.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/apktool_interface.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/apktool_interface.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/commander.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/commander.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/manifest_instrumenter.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/manifest_instrumenter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/instrumenting/smali_instrumenter.py" afterPath="$PROJECT_DIR$/smiler/instrumenting/smali_instrumenter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/reporter.py" afterPath="$PROJECT_DIR$/smiler/reporter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smiler/smiler.py" afterPath="$PROJECT_DIR$/smiler/smiler.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="smalitree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/smalitree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smali_instrumenter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smiler/instrumenting/smali_instrumenter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6897">
+              <caret line="387" column="42" lean-forward="false" selection-start-line="387" selection-start-column="42" selection-end-line="387" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#7791#8026#0" expanded="false" />
+                <element signature="e#8963#9317#0" expanded="false" />
+                <element signature="e#9709#10133#0" expanded="false" />
+                <element signature="e#10460#10614#0" expanded="false" />
+                <element signature="e#17262#17829#0" expanded="false" />
+                <element signature="e#17874#18933#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smiler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smiler/smiler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5111">
+              <caret line="285" column="0" lean-forward="false" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AcvInstrumentation.smali" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/smali/tool/acv/AcvInstrumentation.smali">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AcvInstrumentation$1.smali" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/smali/tool/acv/AcvInstrumentation$1.smali">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AcvInstrumentation$2.smali" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/smali/tool/acv/AcvInstrumentation$2.smali">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>arg</find>
+      <find>pickle</find>
+      <find>glob</find>
+      <find>classnode</find>
+      <find>java-style</find>
+      <find>source</find>
+      <find>self.source</find>
+      <find>granula</find>
+      <find>granulari</find>
+      <find>granularity</find>
+      <find>full_folder</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/acvtool.py" />
+        <option value="D:/DevTools/python2.7/Lib/memory.py" />
+        <option value="$PROJECT_DIR$/smiler/granularity.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/manifest_instrumenter.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/apkil/labelnode.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/apkil/fieldnode.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/commander.py" />
+        <option value="$PROJECT_DIR$/smiler/reporter.py" />
+        <option value="$PROJECT_DIR$/smiler/coverage.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/android_manifest.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/apkil/typenode.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/apkil/methodnode.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/apkil/insnnode.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/apktool_interface.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/apkil/classnode.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/apkil/smalitree.py" />
+        <option value="$PROJECT_DIR$/smiler/instrumenting/smali_instrumenter.py" />
+        <option value="$PROJECT_DIR$/smiler/smiler.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1712" />
+    <option name="y" value="129" />
+    <option name="width" value="1943" />
+    <option name="height" value="1100" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="acvtool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acvtool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="acvtool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acvtool" type="462c0819:PsiDirectoryNode" />
+              <item name="smiler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="acvtool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acvtool" type="462c0819:PsiDirectoryNode" />
+              <item name="smiler" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="acvtool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="acvtool" type="462c0819:PsiDirectoryNode" />
+              <item name="smiler" type="462c0819:PsiDirectoryNode" />
+              <item name="serialisation" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/acvtool.py" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.acvtool">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\DevTools\python2.7\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="acvtool" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/acvtool.py" />
+      <option name="PARAMETERS" value="instrument C:\Users\hjpar\acvtool\Reddit.apk" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="acvtool" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="acvtool" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/acvtool.py" />
+      <option name="PARAMETERS" value="instrument --granularity class C:\Users\hjpar\acvtool\Reddit.apk" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="memory" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\DevTools\python2.7\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="acvtool" />
+      <option name="SCRIPT_NAME" value="D:/DevTools/python2.7/Lib/memory.py" />
+      <option name="PARAMETERS" value="instrument C:\Users\hjpar\acvtool\Reddit.apk" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.acvtool" />
+      <item index="1" class="java.lang.String" itemvalue="Python.memory" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.acvtool" />
+        <item index="1" class="java.lang.String" itemvalue="Python.memory" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2d88a46-1749-4aa4-9cf0-9cbab5be251c" name="Default" comment="" />
+      <created>1569650073772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569650073772</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1712" y="129" width="1943" height="1100" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25116763" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38133875" sideWeight="0.4890625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34394905" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915073" sideWeight="0.5109375" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/smiler/instrumenting/smali_instrumenter.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="28" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/smiler/smiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5111">
+          <caret line="285" column="0" lean-forward="false" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/smali/tool/acv/AcvInstrumentation.smali">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/smali/tool/acv/AcvInstrumentation$1.smali">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/smali/tool/acv/AcvInstrumentation$2.smali">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/smalitree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/methodnode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3971">
+          <caret line="218" column="32" lean-forward="false" selection-start-line="218" selection-start-column="32" selection-end-line="218" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/classnode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/commander.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/arraydatanode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/acvtool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="45" column="56" lean-forward="false" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/smiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2945">
+          <caret line="171" column="43" lean-forward="true" selection-start-line="171" selection-start-column="43" selection-end-line="171" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/smali_instrumenter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2071">
+          <caret line="109" column="30" lean-forward="true" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#7791#8026#0" expanded="false" />
+            <element signature="e#8963#9317#0" expanded="false" />
+            <element signature="e#9709#10133#0" expanded="false" />
+            <element signature="e#10460#10614#0" expanded="false" />
+            <element signature="e#17262#17829#0" expanded="false" />
+            <element signature="e#17874#18933#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/DevTools/python2.7/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="284" column="0" lean-forward="false" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/acv_reporter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="28" column="67" lean-forward="false" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/DevTools/python2.7/Lib/site-packages/dill/_dill.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="286" column="0" lean-forward="false" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/DevTools/python2.7/Lib/memory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/DevTools/python2.7/Lib/pickle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="233" column="70" lean-forward="false" selection-start-line="233" selection-start-column="70" selection-end-line="233" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/DevTools/python3.6/Lib/site-packages/javaobj.py" />
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/android_manifest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="91" column="41" lean-forward="false" selection-start-line="91" selection-start-column="41" selection-end-line="91" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/coverage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/DevTools/python3.6/Lib/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apktool_interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="50" lean-forward="false" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/fieldnode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/reporter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/arraydatanode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/acvtool.egg-info/SOURCES.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/commander.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/granularity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/manifest_instrumenter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/acvtool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="220" column="0" lean-forward="false" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/DevTools/python3.6/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/typenode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/trynode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/labelnode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/insn3rc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="47" column="80" lean-forward="false" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/insn35c.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/classnode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1330">
+          <caret line="59" column="7" lean-forward="false" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/methodnode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/insnnode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/apkil/smalitree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/instrumenting/smali_instrumenter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6897">
+          <caret line="387" column="42" lean-forward="false" selection-start-line="387" selection-start-column="42" selection-end-line="387" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#7791#8026#0" expanded="false" />
+            <element signature="e#8963#9317#0" expanded="false" />
+            <element signature="e#9709#10133#0" expanded="false" />
+            <element signature="e#10460#10614#0" expanded="false" />
+            <element signature="e#17262#17829#0" expanded="false" />
+            <element signature="e#17874#18933#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/smiler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5111">
+          <caret line="285" column="0" lean-forward="false" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/smali/tool/acv/AcvInstrumentation.smali">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/smali/tool/acv/AcvInstrumentation$1.smali">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smiler/resources/instrumentation/smali/tool/acv/AcvInstrumentation$2.smali">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

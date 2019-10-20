@@ -1,8 +1,8 @@
 import os
 
 from smiler.config import config
-from general_exceptions import MsgException
-from android_manifest import AndroidManifest, \
+from smiler.instrumenting.general_exceptions import MsgException
+from smiler.instrumenting.android_manifest import AndroidManifest, \
     ManifestAlreadyInstrumentedException
 import shutil
 
@@ -23,6 +23,7 @@ def instrumentAndroidManifestFile(pathToUnmodifiedFile, pathToModifiedFile=None,
                 initial pathToUnmodifiedFile will be overridden.
         '''
         if not os.path.isfile(pathToUnmodifiedFile):
+            print(pathToModifiedFile)
             raise IllegalArgumentException("File [%s] does not exist!" % pathToUnmodifiedFile) 
         androidManifest = AndroidManifest(pathAndroidManifest=pathToUnmodifiedFile)
         packageName = androidManifest.getPackageName()

@@ -4,18 +4,19 @@ import cgi
 import smiler
 from config import config
 import javaobj
-import cPickle as pickle
+import _pickle as pickle
 import shutil
 import logging
 from operator import attrgetter
-from granularity import Granularity
-from coverage import CoverageData
-from instrumenting.apkil.smalitree import SmaliTree
+from smiler.granularity import Granularity
+from smiler.coverage import CoverageData
+from smiler.instrumenting.apkil.smalitree import SmaliTree
 from chameleon import PageTemplateLoader
 from chameleon.utils import Markup
-from instrumenting.utils import Utils as Utils2
-from serialisation.xml_serialiser import XmlSerialiser
+from smiler.instrumenting.utils import Utils as Utils2
+from smiler.serialisation.xml_serialiser import XmlSerialiser
 import re
+import glob
 
 COV_CLASS = 'cov' #html class, ex: '<span class="%COV_CLASS%"/>'
 EXEC_CLASS = 'exec'
@@ -38,14 +39,13 @@ def generate(package, pickle_path, output_dir, ec_dir=None, xml=True, html=True,
     logging.info("report saved: {0}".format(report_dir))
 
 
-def get_covered_smalitree(ec_files, pickle_path):
-    sts = None    
-    with open(pickle_path, 'rb') as f:                
-        while True : 
-            st = pickle.load(f)
-            if st is None : 
-                break 
-            sts.append[st]
+# Get Metadirectorypath instead of pickle path because there are multiple pickle file
+def get_covered_smalitree(ec_files, meta_dir):
+    sts = []
+    for pickle_path in glob.glob(meta_dir + '/*.pickle'):
+        with open(pickle_path, 'rb') as f:
+                st = pickle.load(f)
+                sts.append[st]
 
     for ec in ec_files:
         coverage = read_ec(ec)
@@ -267,7 +267,7 @@ def read_ec(ec_path):
     return pobj
 
 def cover_smalitree(sts, coverage):
-    for st in sts : 
+    for st in sts:
         i = 0
         for c_i in range(len(st.classes)):
             cl = st.classes[c_i]

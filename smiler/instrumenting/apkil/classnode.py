@@ -1,9 +1,10 @@
-import methodnode
 import sys
 import os
-from logger import log
-from fieldnode import FieldNode
-from codeblocknode import CodeBlockNode
+from smiler.instrumenting.apkil.logger import log
+from smiler.instrumenting.apkil.fieldnode import FieldNode
+from smiler.instrumenting.apkil.codeblocknode import CodeBlockNode
+import smiler.instrumenting.apkil.methodnode as methodnode
+from io import StringIO
 
 class ClassNode(object):
 
@@ -26,6 +27,7 @@ class ClassNode(object):
         self.annotations_comment = ''
         self.annotations = []
         self.debugs = []
+        self.full_folder = ''
 
         if filename or buf:
             self.__parse(filename, buf, folder)
@@ -39,15 +41,14 @@ class ClassNode(object):
     def __parse(self, file_path, buf, folder):
         if file_path:
             self.file_path = file_path
-            f = open(self.file_path, 'r')
+            f = open(self.file_path, 'r', encoding='utf-8')
         elif buf:
             f = StringIO.StringIO(buf)
         else:
             return
 
         self.folder = folder
-        full_folder, self.file_name = os.path.split(file_path)
-        
+        self.full_folder, self.file_name = os.path.split(file_path)
 
         line = f.readline()
         while line:
@@ -58,7 +59,7 @@ class ClassNode(object):
             segs = line.split()
             # .source <source-file>
             if segs[0] == ".source":
-                self.source = segs[1]
+                self.source = ' '.join(segs[1:])
             # .class <access-spec> <class-name>
             elif segs[0] == ".class":
                 self.name = segs[-1]
@@ -258,4 +259,3 @@ class ClassNode(object):
         if coverable == 0:
             return None
         return float(self.mtds_covered()) / coverable
-        

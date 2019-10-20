@@ -3,13 +3,13 @@ import re
 import sys
 import shutil
 import logging
-import cPickle as pickle
-from apkil.smalitree import SmaliTree
-from apkil.insnnode import InsnNode
+import _pickle as pickle
+from smiler.instrumenting.apkil.smalitree import SmaliTree
+from smiler.instrumenting.apkil.insnnode import InsnNode
 from pkg_resources import resource_filename
-from utils import Utils
-from acv_reporter import AcvReporter
-from ..granularity import Granularity
+from smiler.instrumenting.utils import Utils
+from smiler.instrumenting.acv_reporter import AcvReporter
+from smiler.granularity import Granularity
 
 class Instrumenter(object):
     ''' Instrumenter consists of instrumenting code to track smali instructions in
@@ -34,12 +34,14 @@ class Instrumenter(object):
         '''Generates tracking code for evry smali instruction and label.'''
         print('instrumenting')
 
-    def save_instrumented_smali(self, output_dir, instrument=True):
+    def save_instrumented_smali(self, output_dirs, instrument=True):
         '''Saves instrumented smali to the specified directory/'''
-        print("saving instrumented smali:  %s..." % output_dir)
-        if os.path.exists(output_dir):
-            shutil.rmtree(output_dir)
-        os.makedirs(output_dir)
+
+        for output_dir in output_dirs:
+            if os.path.exists(output_dir):
+                shutil.rmtree(output_dir)
+            os.makedirs(output_dir)
+
         classes_info = []
         class_number = 0 # to make array name unique
         # Helps to find specific method that cased a fail after the instrumentation.
@@ -49,7 +51,7 @@ class Instrumenter(object):
         # numbers will be instrumented
         dbg_instrument = instrument
         for class_ in self.smalitree.classes:
-            class_path = os.path.join(output_dir, class_.folder, class_.file_name)
+            class_path = os.path.join(class_.full_folder, class_.file_name)
             code, cover_index, method_number, is_instrumented = self.instrument_class(
                 class_, 
                 class_number, 
@@ -65,15 +67,16 @@ class Instrumenter(object):
                 dbg_instrument = False
         if self.dbg:
             print("Number of methods instrumented: {0}-{1} from {2}".format(self.dbg_start, self.dbg_end, method_number))
+
         if instrument:
-            self.generate_reporter_class(classes_info, output_dir)
+            self.generate_reporter_class(classes_info, output_dirs)
             if self.mem_stats:
                 self.save_reporter_array_stats(classes_info)
             Utils.copytree(self.instrumentation_smali_path, output_dir)
         
-    def generate_reporter_class(self, classes_info, dir_path):
+    def generate_reporter_class(self, classes_info, dir_paths):
         acv_reporter = AcvReporter(classes_info)
-        acv_reporter.save(dir_path)
+        acv_reporter.save(dir_paths[-1])
 
     def save_reporter_array_stats(self, classes_info, verbose=False):
         log_path = os.path.join("allocation_log.csv")
@@ -300,7 +303,7 @@ class Instrumenter(object):
         if not is_static:
             move = "move-object/16 %s, %s" % (reg_map['p0'], 'p0')
             insns.append(move)
-        sorted_keys = sorted(reg_map.iterkeys(), key=lambda x: int(x[1:]))
+        sorted_keys = sorted(iter(reg_map.keys()), key=lambda x: int(x[1:]))
         # p0 register is a link for self object if method is not static
         is_self_object = 1
         if is_static:
@@ -373,16 +376,17 @@ class Instrumenter(object):
         if not os.path.exists(file_dir):
             os.makedirs(file_dir)
 
-        with open(output_path, 'w') as f:
+        with open(output_path, 'w', encoding='utf-8') as f:
             f.write(smali_code)
 
-    def save_pickle(self, pickle_path):
+    def save_pickle(self, package, metadata_dir):
+        pickle_path = os.path.join(metadata_dir, "{}.pickle".format(package.replace('.', '-')))
         '''Saves source Smali code and links to the tracked instructions.'''
         output_dir, file_name = os.path.split(pickle_path)
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
         with open(pickle_path, 'wb') as f:
-            pickle.dump(self.smalitree, f, pickle.HIGHEST_PROTOCOL)
+            pickle.dump(self.smalitree, f, 2)
         print('pickle file saved: {0}'.format(pickle_path))
 
 class InstrumentingRegisters(object):
