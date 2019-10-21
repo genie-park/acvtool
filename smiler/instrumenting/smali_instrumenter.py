@@ -10,6 +10,7 @@ from pkg_resources import resource_filename
 from smiler.instrumenting.utils import Utils
 from smiler.instrumenting.acv_reporter import AcvReporter
 from smiler.granularity import Granularity
+from ..granularity import Granularity
 
 class Instrumenter(object):
     ''' Instrumenter consists of instrumenting code to track smali instructions in
@@ -29,6 +30,7 @@ class Instrumenter(object):
         self.dbg_start = dbg_start
         self.dbg_end = dbg_end
         self.mem_stats = mem_stats
+        self.method_counter = 0
 
     def instrument(self):
         '''Generates tracking code for evry smali instruction and label.'''
@@ -50,11 +52,13 @@ class Instrumenter(object):
         # dbg_ means specific part of the code defined by dbg_start-dbg_end
         # numbers will be instrumented
         dbg_instrument = instrument
+        cover_index = 0 
         for class_ in self.smalitree.classes:
             class_path = os.path.join(class_.full_folder, class_.file_name)
             code, cover_index, method_number, is_instrumented = self.instrument_class(
                 class_, 
                 class_number, 
+                cover_index, 
                 method_number=method_number,
                 instrument=dbg_instrument,
                 dbg_start=self.dbg_start, 
@@ -67,16 +71,11 @@ class Instrumenter(object):
                 dbg_instrument = False
         if self.dbg:
             print("Number of methods instrumented: {0}-{1} from {2}".format(self.dbg_start, self.dbg_end, method_number))
-
-        if instrument:
-            self.generate_reporter_class(classes_info, output_dirs)
+        if instrument:            
             if self.mem_stats:
                 self.save_reporter_array_stats(classes_info)
             Utils.copytree(self.instrumentation_smali_path, output_dir)
         
-    def generate_reporter_class(self, classes_info, dir_paths):
-        acv_reporter = AcvReporter(classes_info)
-        acv_reporter.save(dir_paths[-1])
 
     def save_reporter_array_stats(self, classes_info, verbose=False):
         log_path = os.path.join("allocation_log.csv")
@@ -90,9 +89,8 @@ class Instrumenter(object):
             csv_text = "{},{}".format(self.package, memory)
         Utils.log_entry(log_path, csv_text+'\n')
 
-    def instrument_class(self, smali_class, class_number, method_number=0, instrument=True, dbg_start=None, dbg_end=None):
-        class_lines = []
-        cover_index = 0
+    def instrument_class(self, smali_class, class_number, cover_index, method_number=0, instrument=True, dbg_start=None, dbg_end=None):
+        class_lines = []        
         entry_lines = []
         entry_lines.extend(smali_class.get_class_description())
         entry_lines.extend(smali_class.get_annotations())
@@ -326,15 +324,11 @@ class Instrumenter(object):
             insns.append(move)
             reg_index += 1
 
-        init0 = "sget-object {}, {}:[Z".format(regs.v0, AcvReporter.get_reporter_field(class_name, class_number))
-        init1 = "const/16 {}, 0x1".format(regs.v1)
-        insns.append(init0)
-        insns.append(init1)
         return insns
 
     def get_tracking_insns(self, regs, cover_index):
-        line1 = "const/16 %s, %s" % (regs.v2, hex(cover_index))
-        line2 = "aput-boolean %s, %s, %s" % (regs.v1, regs.v0, regs.v2)
+        line1 = "const/16 %s, %s" % (regs.v0, hex(cover_index))
+        line2 = "invoke-static/range {%s..%s}, Ltool/acv/AcvReporter;->setCovered(I)V" % (regs.v0, regs.v0)
         return [line1, line2]
     
     def get_insn_change_registers(self, insn, reg_map):
@@ -379,8 +373,7 @@ class Instrumenter(object):
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(smali_code)
 
-    def save_pickle(self, package, metadata_dir):
-        pickle_path = os.path.join(metadata_dir, "{}.pickle".format(package.replace('.', '-')))
+    def save_pickle(self, package, pickle_path):
         '''Saves source Smali code and links to the tracked instructions.'''
         output_dir, file_name = os.path.split(pickle_path)
         if not os.path.exists(output_dir):

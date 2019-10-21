@@ -175,8 +175,8 @@ def instrument_apk(apk_path, result_dir, dbg_start=None, dbg_end=None, installat
     # package = "com.reddit.frontpage"
     instrument_manifest(manifest_path)
     smali_code_paths = get_path_to_smali_code(unpacked_data_path)
-    metadata_dir = get_path_to_instrumentation_metadata_dir(result_dir)
-    instrument_smali_code(smali_code_paths, metadata_dir, package, granularity, dbg_start, dbg_end, mem_stats)
+    pickle_path = get_pickle_path(apk_path, result_dir)    
+    instrument_smali_code(smali_code_paths, pickle_path, package, granularity, dbg_start, dbg_end, mem_stats)
     logging.info("instrumented")
    
     instrumented_package_path = get_path_to_instrumented_package(apk_path, result_dir)
