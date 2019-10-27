@@ -6,6 +6,7 @@ import threading
 import signal
 import logging
 import time
+
 from smiler.config import config
 from smiler.granularity import Granularity
 from smiler.instrumenting import manifest_instrumenter
@@ -38,20 +39,19 @@ def request_pipe(cmd):
     pipe = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     out, err = pipe.communicate()
 
-    res = out
+    res = out.decode('utf-8')
     if not out:
         res = err
     
-    if pipe.returncode > 0:
-        raise Exception("----------------------------------------------------\n\
-Out: %s\nError: %s" % (out, err))
+    # if pipe.returncode > 0:
+    #     raise Exception("----------------------------------------------------\n Out: %s\nError: %s" % (out, err))
 
     return res
 
 def get_apk_properties(path):
     info_cmd = "%s dump badging %s" % (config.aapt_path, path)
     out = request_pipe(info_cmd)
-    matched = re.match(apk_info_pattern, out.decode('utf-8'))
+    matched = re.match(apk_info_pattern, out)
 
     package_name = matched.group('package')
     
@@ -130,7 +130,9 @@ def start_instrumenting(package, release_thread=False, onstop=None, timeout=None
 def coverage_is_locked(package_name):
     cmd = "{} shell \"test -e /mnt/sdcard/{}.lock > /dev/null 2>&1 && echo \'1\' || echo \'0\'\"".format(config.adb_path, package_name)
     logging.debug('Command to check lock file:' + cmd)
-    locked = subprocess.check_output(cmd, shell=True).replace("\n","").replace("\r", "")
+    locked = subprocess.check_output(cmd, shell=True)
+    locked = locked.decode('utf-8')
+    locked = locked.replace("\n","").replace("\r", "")
     return locked == '1'
 
 def stop_instrumenting(package_name, timeout=None):

@@ -22,6 +22,7 @@ class Utils(object):
         # Group classes by relative path to generate index.html.
         groups = []
         classes = []
+
         key = tree.classes[0].folder
         classes.append(tree.classes[0])
         for i in range(1, len(tree.classes)):

@@ -101,11 +101,11 @@ def get_parser():
         Android applications when its sources are not available.')
     parser.add_argument('--version', action='version', version=str(config.version))
 
-    subparsers = parser.add_subparsers(dest='subcmd', metavar="<command>", 
+    subparsers = parser.add_subparsers(dest='subcmd', metavar="<command>",
         help="acvtool commands")
     
     parser_instrument = subparsers.add_parser("instrument", help="Instruments an apk")
-    parser_instrument.add_argument("apk_path", metavar="<path_to_apk>", 
+    parser_instrument.add_argument("apk_path", metavar="<path_to_apk>", default='app-debug.apk',
             help="Path to apk file")
     parser_instrument.add_argument("--wd", metavar="<result_directory>", 
             default=config.default_working_dir,
@@ -127,9 +127,8 @@ def get_parser():
     parser_instrument.add_argument("-r", "--report", action="store_true",
             help="Performs the whole testing cycle in a single session: \
             instrument, start, report.")
-    parser_instrument.add_argument("-g", "--granularity", metavar="<granularity>", 
-            help="Code coverage granularity [instruction or method].", choices=Granularity.granularities(),
-            default=Granularity.default)
+    parser_instrument.add_argument("-g", "--granularity", metavar="<granularity>", default='method',
+            help="Code coverage granularity [instruction or method].", choices=Granularity.granularities())
     parser_instrument.add_argument("-t", "--timeout", metavar="<timeout>", required=False,
             help="Waiting time for coverage file preparing.",
             default=config.default_onstop_timeout)
@@ -215,6 +214,7 @@ def main():
     setup_logging()
     parser = get_parser()
     args = parser.parse_args()
+    
     run_actions(parser, args)
 
 if __name__ == "__main__":

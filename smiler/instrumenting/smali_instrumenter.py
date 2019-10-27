@@ -8,7 +8,7 @@ from smiler.instrumenting.apkil.smalitree import SmaliTree
 from smiler.instrumenting.apkil.insnnode import InsnNode
 from pkg_resources import resource_filename
 from smiler.instrumenting.utils import Utils
-from smiler.instrumenting.acv_reporter import AcvReporter
+
 from smiler.granularity import Granularity
 from ..granularity import Granularity
 

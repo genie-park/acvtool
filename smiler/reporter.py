@@ -1,8 +1,8 @@
 import os
 import sys
 import cgi
-import smiler
-from config import config
+from smiler.smiler import get_execution_results
+from smiler.config import config
 import javaobj
 import _pickle as pickle
 import shutil
@@ -25,8 +25,8 @@ not_instr_regex = re.compile("^(move-result|move-exception).*$")
 def generate(package, pickle_path, output_dir, ec_dir=None, xml=True, html=True, granularity="instruction"):
     report_dir = os.path.join(output_dir, package, 'report')
     if ec_dir is None:
-        ec_dir = config.get_ec_dir(output_dir, package)
-        smiler.get_execution_results(package, ec_dir)
+        ec_dir = config.get_ec_dir(output_dir, package) 
+        # get_execution_results(package, ec_dir)
     recreate_dir(report_dir)
     logging.info("report generating...")
     ec_files = [os.path.join(ec_dir, f) for f in os.listdir(ec_dir) if os.path.isfile(os.path.join(ec_dir, f))]
@@ -40,12 +40,10 @@ def generate(package, pickle_path, output_dir, ec_dir=None, xml=True, html=True,
 
 
 # Get Metadirectorypath instead of pickle path because there are multiple pickle file
-def get_covered_smalitree(ec_files, meta_dir):
+def get_covered_smalitree(ec_files, pickle_path):
     sts = []
-    for pickle_path in glob.glob(meta_dir + '/*.pickle'):
-        with open(pickle_path, 'rb') as f:
-                st = pickle.load(f)
-                sts.append[st]
+    with open(pickle_path, 'rb') as f:
+        sts = pickle.load(f)
 
     for ec in ec_files:
         coverage = read_ec(ec)
@@ -62,20 +60,19 @@ def save_xml_report(output_dir, smalitree, app_name, granularity):
     path = os.path.join(output_dir, 'acvtool-report.xml')
 
     with open(path, 'w') as f:
-        f.write(xml)
+        f.write(xml.decode('utf-8'))
 
-def save_html_report(output_dir, smalitrees, app_name, granularity):
+def save_html_report(output_dir, smalitree, app_name, granularity):
     templates = PageTemplateLoader(config.templates_path)
     resources_dir = os.path.join(output_dir, '.resources')
     Utils2.copytree(config.html_resources_dir_path, resources_dir)
 
     class_template = templates['class.pt']
 
-    for smalitree in smalitrees: 
-        for cl in smalitree.classes:
-            save_class(cl, class_template, output_dir, app_name, granularity)
+    for cl in smalitree.classes:
+        save_class(cl, class_template, output_dir, app_name, granularity)
 
-        save_coverage(smalitree, templates, output_dir, app_name, granularity)
+    save_coverage(smalitree, templates, output_dir, app_name, granularity)
 
 def save_coverage(tree, templates, output_dir, app_name, granularity):
     groups = Utils2.get_groupped_classes(tree)
@@ -105,7 +102,7 @@ def save_coverage(tree, templates, output_dir, app_name, granularity):
                         progress_all=total_coverage_data.coverable(granularity))
     root_path = ''
     html = index_template(table=Markup(table), appname=app_name, title=app_name, package=None, 
-                          respath=root_path, file_name=None, granularity=Granularity.get(granularity))
+                          respath=root_path, file_name=None, granularity='method')
     path = os.path.join(output_dir, 'index.html')
     with open(path, 'w') as f:
         f.write(html)
@@ -159,7 +156,7 @@ def save_package_indexhtml(class_group, templates, output_dir, app_name, granula
                         progress_covered=total_coverage_data.covered(granularity),
                         progress_all=total_coverage_data.coverable(granularity))
     html = index_template(table=Markup(table), appname=app_name, title=folder, package=package_name, 
-                          respath=root_path, file_name=None, granularity=Granularity.get(granularity))
+                          respath=root_path, file_name=None, granularity='method')
     rel_path = os.path.join(folder, 'index.html').replace('\\', '/')
     path = os.path.join(output_dir, rel_path).replace('\\', '/')
     with open(path, 'w') as f:
@@ -255,7 +252,7 @@ def save_class(cl, class_template, output_dir, app_name, granularity):
         respath += '../'
     html = class_template(code=Markup("\n".join(buf)), appname=app_name, title=cl.file_name, 
                           package=Utils2.get_standart_package_name(cl.name), respath=respath,
-                          granularity=Granularity.get(granularity))
+                          granularity='method')
     with open(class_path, 'w') as f:
         f.write(html)
 
@@ -267,20 +264,16 @@ def read_ec(ec_path):
     return pobj
 
 def cover_smalitree(sts, coverage):
-    for st in sts:
-        i = 0
-        for c_i in range(len(st.classes)):
-            cl = st.classes[c_i]
-            if cl.is_coverable():
-                cov_class = coverage[i]
-                i += 1
-                for m_i in range(len(cl.methods)):
-                    method = cl.methods[m_i]
-                    method.called = method.cover_code > -1 and cov_class[method.cover_code]
-                    for ins in method.insns:
-                        ins.covered = ins.cover_code > -1 and cov_class[ins.cover_code]
-                    for k, lbl in method.labels.items():
-                        lbl.covered = lbl.cover_code > -1 and cov_class[lbl.cover_code]
+    for c_i in range(len(sts.classes)):
+        cl = sts.classes[c_i]
+        if cl.is_coverable():
+            for m_i in range(len(cl.methods)):
+                method = cl.methods[m_i]
+                method.called = method.cover_code > -1 and coverage[method.cover_code]
+                # for ins in method.insns:
+                #     ins.covered = ins.cover_code > -1 and coverage[ins.cover_code]
+                # for k, lbl in method.labels.items():
+                #     lbl.covered = lbl.cover_code > -1 and coverage[lbl.cover_code]
 
 def recreate_dir(directory):
     if os.path.exists(directory):
